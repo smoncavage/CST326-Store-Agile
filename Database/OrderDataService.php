@@ -5,10 +5,10 @@ Milestone 6
 04 April 2021
 -->
 <?php
-include('../../autoloader.php');
+include('./../autoloader.php');
 class OrderDataService{
     function findByOrderDate($search){
-        $conn = dbConnect();
+        $conn = getConnection();
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
             exit();
@@ -31,7 +31,7 @@ class OrderDataService{
     }
     
     function findByOrderID($search){
-        $conn = dbConnect();
+        $conn = getConnection();
         $serch=intval($search);
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();

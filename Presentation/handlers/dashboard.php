@@ -8,12 +8,13 @@ Milestone 1
 
 <?php
 //include auth_session.php file on all user panel pages
-include("auth_session.php");
+include("./../../Utility/auth_session.php");
 //sessCheck();
-include('../../../autoloader.php');
+include('./../../autoloader.php');
 ?>
 <?php include '../views/layout_head.php'; ?>
-<link rel = "stylesheet" href = "../../css/style.css" type="text/css"/>
+<html lang="">
+<link rel = "stylesheet" href = "../../Presentation/css/style.css" type="text/css"/>
 <body class = "body">
 
     <div class="form">
@@ -28,13 +29,6 @@ include('../../../autoloader.php');
         <a href="../views/login/logout.php"> <input type = "submit" name = "logout" value = "Logout"/></a>
 		</form>
 		<br>
-		<!--
-		<input type = "text" name = "searchfield" placeholder = "Search the Database">
-		<input type = "submit" name = "search" value = "Search">
-		<form class = "text-align" method = "post" action = "./show_db.php">
-		<input type = "submit" name = "database" value = "Show Full Database">
-		</form>
-		-->
     </div>
 </body>
 <?php  include '../views/layout_foot.php'; ?>

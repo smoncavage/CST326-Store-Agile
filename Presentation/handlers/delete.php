@@ -9,11 +9,12 @@ Some portions based on code found on: https://codeofaninja.com/2015/08/simple-ph
 <?php
 session_start();
 
-include('../../../autoloader.php');
+include('./../../autoloader.php');
+include('./../../Database/db.php');
 
 function deleteUser(){
     $rowId = $_SESSION['rowID'];
-    $conn = dbConnect();
+    $conn = getConnection();
     $query = "DELETE FROM users WHERE id = '$rowId' ";
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     header("Location: ./Store.php");
@@ -22,7 +23,7 @@ function deleteUser(){
 
 function deleteProduct(){
     $rowId = $_SESSION['rowID'];
-    $conn = dbConnect();
+    $conn = getConnection();
     $query = "DELETE FROM products WHERE id = '$rowId' ";
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     header("Location: ./Store.php");
@@ -37,13 +38,13 @@ function deleteProductFromCart(){
     include_once "objects/cart_item.php";
     
     // get database connection
-    $db = dbConnect();
+    $db = getConnection();
     
     // initialize objects
     $cart_item = new CartItem($db);
     
     // remove cart item from database
-    $cart_item->user_id=1; // we default to '1' because we do not have logged in user
+    $cart_item->user_id=1; // we default to '1' because we do not have logged-in user
     $cart_item->product_id=$product_id;
     $cart_item->delete();
     

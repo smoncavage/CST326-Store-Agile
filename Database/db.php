@@ -2,18 +2,15 @@
 class Database{
  
     // specify your own database credentials
-    private $host = "cst323php.mysql.database.azure.com";
-    private $db_name = "appdata";
-    private $username = "adminuser";
-    private $password = "NaVy.2005";
+    private string $host = "cst323php.mysql.database.azure.com";
+    private string $db_name = "appdata";
+    private string $username = "adminuser";
+    private string $password = "NaVy.2005";
     public $conn;
-	
-	public $con = mysqli_init(); 
-	mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); 
-	mysqli_real_connect($con, "cst323php.mysql.database.azure.com", "adminuser@cst323php", $password, $database, 3306);
- 
+
     // get the database connection
-    public function getConnection(){
+    public function getConnection(): ?PDO
+    {
  
         $this->conn = null;
  

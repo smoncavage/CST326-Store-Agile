@@ -7,6 +7,7 @@ Milestone 1
 -->
 
 <?php include 'layout_head.php'; ?>
+<html lang="">
 <link rel = "stylesheet" href = "../css/style.css" type="text/css">
 
 <body class = "body">

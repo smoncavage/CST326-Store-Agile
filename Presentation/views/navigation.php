@@ -4,7 +4,7 @@ CST-236
 eCommerce Site Milestone Project
 Milestone 4
 21 March 2021
-Navigation Update to seperate file
+Navigation Update to separate file
 -->
 
 <br>

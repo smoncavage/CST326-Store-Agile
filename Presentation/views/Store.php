@@ -15,14 +15,14 @@ Milestone 2
 <?php 
 //error_reporting(E_ALL);
 //ini_set('display_errors',1);
-include '../layout_head.php';
+include './layout_head.php';
 include('./_displayAllProducts.php');
 include('../../autoloader.php');
 //displayAllProducts();
 ?>
 <link rel = "stylesheet" href = "../css/style.css" type="text/css">
 
-<body class = "body" style="text-align:center" class="form2"> 
+<body class = "body" style="text-align:center">
 <div style="text-align:center" class="container" id="main-content">
 	<h3 class = "home-title" >Welcome to eCommerce!</h3> 
 	<div style="text-align:center" class="container">
@@ -38,9 +38,11 @@ include('../../autoloader.php');
                         </tr>
                         </thead>
                         <tbody>
-                            <?php for($i = 0; $i < count($results->data); $i++) ?>
+                            <?php if (isset($results)){
+                            for($i = 0; $i < count($results->data); $i++) ?>
                     		<tr>
-                            <td><?php echo $results->data[$i]['Product ID']; ?></td>
+                            <td><?php
+                                } echo $results->data[$i]['Product ID']; ?></td>
                             <td><?php echo $results->data[$i]['Product Name']; ?></td>
                             <td><?php echo $results->data[$i]['Product Description']; ?></td>
                             <td><?php echo $results->data[$i]['Price']; ?></td>

@@ -9,6 +9,7 @@ Milestone 1
 $layout = __DIR__.'/Presentation/views/layout_head.php';
 include './layout_head.php'; 
 ?>
+<html lang="">
 <link rel = "stylesheet" href = "../css/style.css" type="text/css"/>
 
 <body class = "body">

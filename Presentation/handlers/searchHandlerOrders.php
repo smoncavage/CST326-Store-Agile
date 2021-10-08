@@ -8,21 +8,21 @@ Milestone 6
 <link rel = "stylesheet" href = "../../css/style.css" type="text/css"/>
 <?php
 //include auth_session.php file on all user panel pages
-include("auth_session.php");
+include("./../../Utility/auth_session.php");
 include '../views/layout_head.php';
 /* sessCheck();
 if($_SESSION["valid"] != 1){
 	header("Location: ./login.php");
 } */
 ?>
-<?php include('../../../autoloader.php');; ?>
+<?php include('./../../autoloader.php');; ?>
 <body class = "body">
 
 <form class = "form3" method = "post" >  
  
 <?php
 function getAllOrders(){
-    $conn = dbConnect();
+    $conn = getConnection();
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         exit();
@@ -45,7 +45,7 @@ function getAllOrders(){
 }
 
 function getOrdersbyDate($date){
-    $conn = dbConnect();
+    $conn = getConnection();
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         exit();
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 ?>
 <br>
-<a href = "./search.html">Go Back</a>
+<a href = "./../views/search.html">Go Back</a>
 </form>
 </body>
 <?php include '../views/layout_foot.php'; ?>

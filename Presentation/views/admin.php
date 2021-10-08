@@ -7,75 +7,17 @@ Milestone 1
 -->
 <?php
 //include auth_session.php file on all user panel pages
-include("auth_session.php");
+include("./../../Utility/auth_session.php");
 sessCheck();
 if($_SESSION["valid"] != 1){
 	header("Location: ./login.php");
 }
-include('../../../autoloader.php');
+include('./../../autoloader.php');
 ?>
 
 <?php include 'layout_head.php'; ?>
   
-<form class ="form2" action = "./approved.php" method = "POST" >
-<?php
-include "myfuncs.php";
 
-$conn = dbConnect();
-$query = "SELECT * FROM tempposts";
-$result = mysqli_query($conn,$query) or die(mysqli_error($conn));
-if (mysqli_num_rows($result) > 0) {
-?>
-    <table class = "table">
-                       
-    <tr>
-    <th>Blog Title</th>
-    <th>Blog Post</th>
-	<th>Approved</th>
-    </tr>
-<?php
-$i=0;
-while($row = mysqli_fetch_array($result)) {
-?>
-    <tr>
-    <td><?php echo $row["title"]; ?></td>
-    <td><?php echo $row["blog"]; ?></td>
-	<td><select id = "approvepost" name = "approved">
-		<option value = "Not Selected" selected>Please Select</option>
-		<option value = "Approved">Approved</option>
-		<option value = "Dis-Allowed">Disallowed</option>
-		<?php
-		$aprv = $_POST["approvepost"];
-		if($aprv == "Approved"){
-			$row["approved"] = 1;
-		}else{
-			$row["approved"] = 0;
-		}
-		?>
-		</select>
-		</td>
-    </tr>
-<?php
-echo "<br/>";
-$i++;
-}
-?>
-</table>
-<?php
-}
-else{
-    echo "No result found";
-}
-
-?>
-<br>
-<input type = "submit" id = "approve" value = "Submit"></input>
-<br>
-<a href = "./index.php">Go Back</a>
-</form>
-</body>
-<?php include 'layout_foot.php'?>
-</html>
 
 <?php
 /*

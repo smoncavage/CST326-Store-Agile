@@ -9,10 +9,11 @@ Milestone 1
 include '../layout_head.php'; 
 include '../navigation.php';
 ?>
+<html lang="">
 <link rel = "stylesheet" href = "../../css/style.css" type="text/css">
 <body class="form2"> 
 <?php
-    include_once('../../autoloader.php');
+    include_once('./../../../autoloader.php');
 	//session_start();
 	//startSess();
 	//$conn = dbConnect();
@@ -54,8 +55,12 @@ include '../navigation.php';
 ?>
 	<form class = "form" method = "post">
         <h1 class="login-title"><b>Login</b></h1>
-        <input class = "login-input" type="text" class="login-input" name = "username" placeholder = "Username" />
-        <input class = "login-input" type="password" class="login-input" name = "pass" placeholder ="Password"  />
+        <label>
+            <input class = "login-input" type="text"  name = "username" placeholder = "Username" />
+        </label>
+        <label>
+            <input class = "login-input" type="password"  name = "pass" placeholder ="Password"  />
+        </label>
         <a href = "./login.php" ><input class = "login-button" type ="submit" value ="Login" name ="login"/></a>
 		<br>
 		<br>

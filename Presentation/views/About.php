@@ -5,8 +5,9 @@ eCommerce Site Milestone Project
 Milestone 1
 27 February 2021
 -->
+<html lang="php">
 <?php include './layout_head.php';
-include('../../../autoloader.php');?>
+include('./../../autoloader.php');?>
 <link rel = "stylesheet" href = "../css/style.css" type="text/css">
 
 <body class = "body">
