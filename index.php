@@ -5,11 +5,11 @@ eCommerce Site Milestone Project
 Milestone 1
 27 February 2021
 -->
-<?php include 'layout_head.php'; ?>
+<?php include '/Presentation/views/layout_head.php'; ?>
 <body class = "body">
 
 <div class="container" id="main-content">
-	<h3 class = "home-title" >Welcome to eCommerce!</h3>
+	<h3 class = "home-title" >Welcome to ABC Carwash!</h3>
 	<br>
 	<br>
 	<p> <b>Please Login or Register to Continue.</b> </p>
