@@ -13,7 +13,7 @@ include('./../../autoloader.php');?>
 <body class = "body">
 
 <div class="container" id="main-content">
-	<h3 class = "home-title" >Welcome to eCommerce!</h3>
+	<h3 class = "home-title" >Welcome to ABC Carwash!</h3>
 	<br>
 	<br>
 	<p> This is where I tell you about myself. </p>

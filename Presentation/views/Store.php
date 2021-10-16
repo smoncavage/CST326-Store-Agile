@@ -21,6 +21,8 @@ include('../../autoloader.php');
 //displayAllProducts();
 ?>
 <link rel = "stylesheet" href = "../css/style.css" type="text/css">
+<h3 class = "home-title" >Welcome to ABC Carwash!</h3>
+	<br>
 
 <body class = "body" style="text-align:center">
 <div style="text-align:center" class="container" id="main-content">
