@@ -2,10 +2,11 @@
 class Database{
  
     // specify your own database credentials
-    private string $host = "cst323php.mysql.database.azure.com";
-    private string $db_name = "appdata";
-    private string $username = "adminuser";
-    private string $password = "NaVy.2005";
+	private string $connectionstring = "mysql://uspyiewwt6a47kiq:fhjf5mht8clgqbs8@x8autxobia7sgh74.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/kirnyw4ar361d8qd";
+    private string $host = "x8autxobia7sgh74.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+    private string $db_name = "kirnyw4ar361d8qd";
+    private string $username = "uspyiewwt6a47kiq";
+    private string $password = "fhjf5mht8clgqbs8";
     public $conn;
 
     // get the database connection
