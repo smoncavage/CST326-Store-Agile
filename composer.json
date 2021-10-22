@@ -32,7 +32,6 @@
         }
     },
 	"scripts": {
-		"test": [
-        ]
+		"test": "SHELL_INTERACTIVE=1 phpunit --colors=always < /dev/tty"
 	}
 }
