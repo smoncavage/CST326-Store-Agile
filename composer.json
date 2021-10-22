@@ -31,10 +31,15 @@
             "App\\": "cst326-clc/"
         }
     },
+<<<<<<< HEAD
 	"scripts": {
 		"test": [
 			"Composer\\Config::disableProcessTimeout",
             "phpunit"
 		]
+=======
+	"test": {
+		
+>>>>>>> 41e4265855aa7550713128a477fe9fb35ae6acee
 	}
 }
