@@ -145,8 +145,12 @@ try{
 		echo " Error: " . $sql . "" . $conn.error ;
 		echo "Error: " . $sql . "" . mysqli_error($conn);	
 		throw new Exception("User Registration Failed: " . ' ' . mysqli_error($conn), 200);
+<<<<<<< HEAD
 		header("Location: loginFailed.php/");
 		die();
+=======
+		return "../loginFailed.php";
+>>>>>>> a5dc33ab9c8db41b89a3c0748513ab897e0e7dd9
 		<a href = './register.html'><?php echo "Return "?></a><?php echo " to Registration Page, or use Browser 'Back' Button to enter missing information.";
 	}
 	}catch (Exception $e){
