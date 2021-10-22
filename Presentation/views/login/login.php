@@ -7,7 +7,6 @@ Milestone 1
 -->
 <?php 
 include '../layout_head.php'; 
-include '../navigation.php';
 ?>
 <html lang="">
 <link rel = "stylesheet" href = "../../css/style.css" type="text/css">
