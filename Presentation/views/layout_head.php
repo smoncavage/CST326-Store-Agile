@@ -15,7 +15,7 @@ Some portions based on code found on: https://codeofaninja.com/2015/08/simple-ph
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffffff">
-<title><?php echo $page_title ?? "eCommerce"; ?></title>
+<title><?php echo $page_title ?? "ABC Carwash"; ?></title>
 <link rel="stylesheet" href="../css/style.css"/>
 	
 </head>

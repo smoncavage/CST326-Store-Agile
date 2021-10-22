@@ -6,7 +6,7 @@ Milestone 1
 27 February 2021
 -->
 <?php 
-include '../layout_head.php'; 
+include '../layout_head.php';
 ?>
 <html lang="">
 <link rel = "stylesheet" href = "../../css/style.css" type="text/css">

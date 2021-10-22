@@ -118,8 +118,8 @@ function test_input($data) {
 //Secure the Password Added on 7/26/2020
 $password = password_hash($pass, PASSWORD_DEFAULT);
 
-//Create MSQLI Statement for User Insertion 
-$sql = "INSERT INTO 'kirnyw4ar361d8qd.user' (FIRST_NAME, LAST_NAME, USERNAME, PASSWORD)
+//Create MSQLI Statement for User Insertion
+$sql = "INSERT INTO kirnyw4ar361d8qd.user (FIRST_NAME, LAST_NAME, USERNAME, PASSWORD)
 VALUES ('$firstname','$lastname','$username', '$password')";
 
 try{
@@ -158,7 +158,7 @@ try{
 	}
 $conn.close();
 ?>
-
+<link rel="stylesheet" href="../css/style.css"/>
 Click <a href = "../home.php"> here </a> to return to the Main page, or 
 	<a href = "./login.php"> here </a> to go to the Login page.
 
