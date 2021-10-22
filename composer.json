@@ -33,9 +33,6 @@
     },
 	"scripts": {
 		"test": [
-			"@clearCache",
-            "phpunit"
-        ],
-        "clearCache": "rm -rf cache/*"
+        ]
 	}
 }
