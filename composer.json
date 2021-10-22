@@ -33,8 +33,9 @@
     },
 	"scripts": {
 		"test": [
-			"Composer\\Config::disableProcessTimeout",
+			"@clearCache",
             "phpunit"
-		]
+        ],
+        "clearCache": "rm -rf cache/*"
 	}
 }
