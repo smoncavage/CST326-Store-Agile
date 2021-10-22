@@ -12,7 +12,7 @@ PHP Form handler for HTML Registration Module
 include_once'../../../autoloader.php';
 include '../layout_head.php';
 include '../../../Database/db.php';
-include '../navigation.php';
+//include '../navigation.php';
 $db = new Database();
 $conn=$db->getConnection();
 $firstname = $lastname = $username = $pass = $email = $address1 = $city = $state = $zipcode = $country = "";
@@ -119,7 +119,7 @@ function test_input($data) {
 $password = password_hash($pass, PASSWORD_DEFAULT);
 
 //Create MSQLI Statement for User Insertion 
-$sql = "INSERT INTO ecommerce.users (FIRST_NAME, LAST_NAME, USERNAME, PASSWORD)
+$sql = "INSERT INTO 'kirnyw4ar361d8qd.user' (FIRST_NAME, LAST_NAME, USERNAME, PASSWORD)
 VALUES ('$firstname','$lastname','$username', '$password')";
 
 try{
