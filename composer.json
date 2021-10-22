@@ -30,5 +30,11 @@
         "psr-4": {
             "App\\": "cst326-clc/"
         }
-    }	
+    },
+	"scripts": {
+		"test": [
+			"Composer\\Config::disableProcessTimeout",
+            "phpunit"
+		]
+	}
 }
