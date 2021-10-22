@@ -144,8 +144,8 @@ try{
 			
 		echo " Error: " . $sql . "" . $conn.error ;
 		echo "Error: " . $sql . "" . mysqli_error($conn);	
-		throw new Exception("User Registration Failed: " . ' ' . mysqli_error($conn), 202);
-		?>
+		throw new Exception("User Registration Failed: " . ' ' . mysqli_error($conn), 200);
+		return "../loginFailed.php";
 		<a href = './register.html'><?php echo "Return "?></a><?php echo " to Registration Page, or use Browser 'Back' Button to enter missing information.";
 	}
 	}catch (Exception $e){
@@ -159,8 +159,8 @@ try{
 $conn.close();
 ?>
 <link rel="stylesheet" href="../css/style.css"/>
-Click <a href = "../home.php"> here </a> to return to the Main page, or 
-	<a href = "./login.php"> here </a> to go to the Login page.
+Click <a href = "../../home.php"> here </a> to return to the Main page, or 
+	<a href = "../login.php"> here </a> to go to the Login page.
 
 </body>
 <?php include '../layout_foot.php'; ?>
